@@ -1,17 +1,44 @@
-# devops_tasks
-A collection of DevOps practice tasks
+# DevOps Tasks  
+
+A collection of DevOps practice tasks that I implemented during my training.  
+The repository is organized into separate folders for Linux and Docker tasks.  
 
 ---
 
-# Task 2 - Nginx Static Image Server with Custom Port
+## 📂 Repository Structure  
 
-## Description
-This task sets up an Nginx web server to serve static image files from a custom port (8080) using a custom config file.
+devops_tasks/
+│
+├── 1-linux/ # Linux basic tasks (users, permissions, files, etc.)
+│ └── task_01-basics/
+│ ├── solution.md
+│ └── screenshots/
+│
+├── 2-docker/ # Docker-related tasks
+│ └── task_02-nginx-image-server/
+│ ├── Dockerfile
+│ ├── nginx.conf
+│ └── screenshots/
+│
+└── README.md
 
-## Steps
+yaml
+Copy
+Edit
 
-1. Installed `nginx` on Ubuntu using:
-   ```bash
-   sudo apt update
-   sudo apt install nginx -y
+---
+
+## ✅ Completed Tasks  
+
+### 1. Linux  
+- **Task 01 – Basics**  
+  Commands for managing users, files, directories, and permissions.  
+  Includes documentation (`solution.md`) + screenshots.  
+
+### 2. Docker  
+- **Task 02 – Nginx Static Image Server**  
+  - Installed Nginx  
+  - Created custom config to serve static images on port `8080`  
+  - Verified using browser and screenshots
+
 
