@@ -1,0 +1,33 @@
+server {
+    listen 85 default_server;
+    listen [::]:85 default_server;
+
+    server_name _;
+
+    # /hello/
+    location = /hello/ {
+        root /var/www/task_02;
+        try_files /index.html =404;
+    }
+
+    # /image/
+    location = /image/ {
+        root /var/www/task_02;
+        try_files /image.jpg =404;
+    }
+
+    # Caching
+    location ~* \.(?:css|js|jpg|jpeg|png|gif|ico|svg|webp)$ {
+        root /var/www/task_02;
+        expires 30d;
+        add_header Cache-Control "public, max-age=2592000, immutable";
+    }
+
+    # 404 Error Page
+    error_page 404 /404.html;
+    location = /404.html {
+        root /var/www/task_02;
+        internal;
+    }
+}
+
